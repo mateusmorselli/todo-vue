@@ -1,29 +1,33 @@
-# todo-vue
+# Todo List Vue.js
 
-This template should help get you started developing with Vue 3 in Vite.
+Este é um projeto de lista de tarefas simples desenvolvido com Vue.js. O aplicativo permite aos usuários adicionar, marcar como concluídas e filtrar tarefas com base no seu status (pendentes ou concluídas). Ele também exibe uma mensagem quando não houver tarefas pendentes.
 
-## Recommended IDE Setup
+## Funcionalidades
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Adicionar tarefas
+- Marcar tarefas como concluídas
+- Filtrar tarefas (pendentes, concluídas)
+- Exibir mensagem "Nenhuma tarefa pendente" quando não houver tarefas pendentes
+- Exibir mensagem "Nenhuma tarefa finalizada" em caso de náo houver tarefas finalizadas
 
-## Customize configuration
+## Tecnologias
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Vue.js
+- Vite
 
-## Project Setup
+## Como Rodar
 
-```sh
-npm install
-```
+1. Clone este repositório:
 
-### Compile and Hot-Reload for Development
+2. Instale as dependências:
+    ```bash
+    npm install
+    ```
+3. Inicie o servidor de desenvolvimento:
+    ```bash
+    npm run dev
+    ```
 
-```sh
-npm run dev
-```
+## Contribuição
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+Sinta-se à vontade para contribuir com este projeto! Abra uma *issue* ou envie um *pull request*.
