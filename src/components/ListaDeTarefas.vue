@@ -1,5 +1,5 @@
 <script setup>
-    const props = defineProps(['tarefas']);
+    const props = defineProps(['tarefas', 'filtro', 'tarefasFiltradas', 'tarefasFinalizadas']);
 </script>
 
 <template>
@@ -10,6 +10,14 @@
             {{ tarefa.titulo }}
           </label>
         </li>
+        <li class="list-group-item">
+            <p v-if="filtro === 'pendentes' && tarefasFiltradas === 0">
+                Nenhuma tarefa pendente
+            </p>
+            <p v-if="filtro === 'finalizadas' && tarefasFinalizadas === 0">
+                Nenhuma tarefa finalizada
+            </p>
+        </li>     
     </ul>
 </template>
 
@@ -17,5 +25,10 @@
   .done {
     text-decoration: line-through;
     color: red;
+  }
+
+  p {
+    color: red;
+    font-weight: bold;
   }
 </style>

@@ -5,7 +5,7 @@
   import listaDeTarefas from './components/listaDeTarefas.vue';
 
   const estado = reactive({
-    filto: 'todas',
+    filtro: 'todas',
     tarefaTemp: '',
     tarefas: [
       {
@@ -59,7 +59,7 @@
   <div class="container"> 
     <Cabecalho :tarefas-pendentes="getTarefasPendentes().length" />
     <Formulario :trocar-filtro="evento => estado.filtro = evento.target.value" :tarefa-temp="estado.tarefaTemp" :edita-tarefa-temp="evento => estado.tarefaTemp = evento.target.value" :cadastra-tarefa="cadastraTarefa"/>
-    <listaDeTarefas :tarefas="getTarefasFiltradas()" />
+    <listaDeTarefas :tarefas="getTarefasFiltradas()" :tarefas-filtradas="getTarefasFiltradas().length" :filtro="estado.filtro" :tarefas-finalizadas="getTarefasFinalizadas().length"/>
   </div>
 </template>
 
